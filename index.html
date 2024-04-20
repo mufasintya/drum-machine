@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="drum.css" />
+    <script src="drum.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <section id="drum-machine">
+      <div id="display">
+        <!-- <button onclick="togglePower()">On/Off</button> -->
+        <label class="switch">
+          <input type="checkbox" id="toggleBtn" onclick="togglePower()" />
+          <span class="slider">
+            <span class="on">ON</span>
+            <span class="off">OFF</span>
+          </span>
+        </label>
+        <!-- <span class="onofftext on">ON</span>
+        <span class="onofftext off">OFF</span> -->
+
+        <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="1" onchange="changeVolume(this.value)" />
+        <div class="drum-pad-container">
+          <div class="drum-pad" id="Q" onclick="playSound('Q')">
+            <button>Q</button>
+            <audio id="Q_audio" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3"></audio>
+          </div>
+          <div class="drum-pad" id="W" onclick="playSound('W')">
+            <button>W</button>
+            <audio id="W_audio" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3"></audio>
+          </div>
+          <div class="drum-pad" id="E" onclick="playSound('E')">
+            <button>E</button>
+            <audio id="E_audio" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3"></audio>
+          </div>
+          <div class="drum-pad" id="A" onclick="playSound('A')">
+            <button>A</button>
+            <audio id="A_audio" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3"></audio>
+          </div>
+          <div class="drum-pad" id="S" onclick="playSound('S')">
+            <button>S</button>
+            <audio id="S_audio" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3"></audio>
+          </div>
+          <div class="drum-pad" id="Z" onclick="playSound('D')">
+            <button>D</button>
+            <audio id="D_audio" src="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3"></audio>
+          </div>
+          <div class="drum-pad" id="Z" onclick="playSound('Z')">
+            <button>Z</button>
+            <audio id="Z_audio" src="https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3"></audio>
+          </div>
+          <div class="drum-pad" id="X" onclick="playSound('X')">
+            <button>X</button>
+            <audio id="X_audio" src="https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3"></audio>
+          </div>
+          <div class="drum-pad" id="C" onclick="playSound('C')">
+            <button>C</button>
+            <audio id="C_audio" src="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3"></audio>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
